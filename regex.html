@@ -22,10 +22,10 @@
 
 // 2.构造函数写法
 // RegExp
-var str2 = 'alexdsb'
-var p1 = new RegExp('alx','g')
+// var str2 = 'alexdsb'
+// var p1 = new RegExp('alx','g')
 // test()检验匹配的规则是否符合，如果符合返回true
-console.log(p1.test(str2));
+// console.log(p1.test(str2));
 
 // pattern被称为元字符  也就是匹配的规则
 
@@ -66,6 +66,25 @@ console.log(RegExp.$2)   // 这个RegExp的$2 代表取第二组()里的数据�
 // 2、正向预查
 // 3、反向预查
 
+// 三、正则实例对象的方法
+// test() 返回一个布尔值，表示当前模式是否能匹配参数字符串
+// exec() 用来返回匹配的结果。如果发现匹配就返回一个数组，数组中的成员都是匹配的子字符串，否则返回null
+// var re = /(o|l)/g
+// console.log(re.test('hello'));
+// console.log(re.exec('hello,world,lll'));
+
+// 字符串方法
+// match()  对字符串进行正则匹配，返回匹配的结果
+// search()  返回第一个满足条件的匹配结果在整个字符串中的位置。如果没有任何匹配，则返回-1
+// replace() 可以替换匹配的值。它接受两个参数，第一个是正则表达式，表示模式，第二个是替换的内容
+
+// var re = /wor/g
+// const str = 'hello world'
+// console.log(str.match(re));
+// console.log(str.search(re));
+// var re = /wor/g
+// const time = '2022.3.17'
+// console.log(time.replace(/\./g,'-'));
 
 
 
