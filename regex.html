@@ -122,17 +122,26 @@ console.log(RegExp.$2)   // 这个RegExp的$2 代表取第二组()里的数据�
     // console.log(checkPhone('01513346697'));
 // 4.匹配身份证号
     // 验证规则：18位或者15位， 15位全是数字， 18位：前17位是数字，最后一位是数字或者字符x、X(只是举一个例子，不一定正确)
-    function checkId(str){
-      let re = /^(\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/g
+    // function checkId(str){
+    //   let re = /^(\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/g
+    //   if(re.test(str)){
+    //     return '正确'
+    //   }else{
+    //     return '错误'
+    //   }
+    // }
+    // console.log(checkId('154696199509162365'));
+// 5.匹配邮箱
+    // 第一部分@第二部分.com|cn|net
+    function checkEmail(str){
+      let re = /^[a-zA-Z0-9._]+@[a-zA-Z0-9-._]+\.(com|cn|net)$/g
       if(re.test(str)){
         return '正确'
       }else{
         return '错误'
       }
     }
-    console.log(checkId('154696199509162365'));
-// 5.匹配邮箱
-
+    console.log(checkEmail('asadas@163.com'));
 
 
 
